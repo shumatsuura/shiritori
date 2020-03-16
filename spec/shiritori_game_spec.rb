@@ -10,4 +10,10 @@ RSpec.describe ShiritoriGame do
   describe 'all_words' do
     it { expect(ShiritoriGame.all_words).to eq ["リンゴ", "ゴリラ", "ラッパ", "パリ"]}
   end
+
+  describe '#start' do
+    subject(:shiritori_game) { ShiritoriGame.new(player_name: 'シリトリプレイヤー') }
+    # binding.irb
+    it { expect(shiritori_game.start).to include("\\_o< Hi, シリトリプレイヤー. Let's enjoy shiritori game\n") }
+  end
 end

@@ -1,4 +1,6 @@
 class ShiritoriGame
+  attr_accessor :player_name
+
   def self.rule
     rule_text = ''
     rule_text << "すべてカタカナで入力してください\n"
@@ -8,7 +10,15 @@ class ShiritoriGame
   end
 
   def self.all_words
-    ["リンゴ", "ゴリラ", "ラッパ", "パリ"]    
+    ["リンゴ", "ゴリラ", "ラッパ", "パリ"]
   end
 
+  def initialize(player_name)
+    @player_name = player_name
+  end
+
+  def start
+    # @player_name = player_name
+   "\\_o< Hi, #{@player_name}. Let's enjoy shiritori game\n"
+  end
 end
