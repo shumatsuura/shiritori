@@ -6,4 +6,9 @@ class ShiritoriGame
     rule_text << "同じ単語を使ったら負けです\n"
     rule_text
   end
+
+  def self.all_words
+    ["リンゴ", "ゴリラ", "ラッパ", "パリ"]    
+  end
+
 end
